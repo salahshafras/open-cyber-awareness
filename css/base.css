@@ -1,0 +1,82 @@
+/* ---- Theme tokens ---- */
+:root{
+  --bg1:#11183a; --bg2:#0b1020; --bg3:#07122a;
+  --ink:#0f172a; --muted:#64748b; --card:#ffffff;
+  --brand:#5b6cff; --brand2:#7c3aed; --ring:#c7d2fe;
+  --primary:#f6c23e; --primaryHover:#e0ac1c;
+  --secondary:#36b9cc; --secondaryHover:#2c9faf;
+  --radius:14px;
+}
+
+/* ---- Base ---- */
+*{ box-sizing:border-box; }
+html,body{ height:100%; margin:0; }
+body{
+  color:var(--ink);
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    background: linear-gradient(120deg,var(--bg1),var(--bg2),var(--bg3));
+  background-size:200% 200%;
+  background-attachment: fixed;  /* keep gradient continuous while scrolling */
+  animation:bgShift 18s ease-in-out infinite;
+}
+@keyframes bgShift{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+[hidden]{ display:none !important; }
+
+/* ---- Shared header ---- */
+.app-header{
+  display:flex; justify-content:space-between; align-items:center;
+  padding:12px 16px; background:#fff; border-bottom:1px solid #e5e7eb;
+}
+.app-header h1{ margin:0; font-size:18px; font-weight:800; font-family:Poppins,Inter,sans-serif; }
+.scoreboard{ display:flex; align-items:center; gap:8px; color:#334155; font-weight:700; }
+.scoreboard .dot{ color:#94a3b8; }
+.badge{ display:inline-block; padding:2px 8px; border-radius:999px; background:#eef2ff; border:1px solid #c7d2fe; font-size:12px; }
+.pass-rule{ background:#ecfeff; border-color:#a5f3fc; }
+
+/* ---- Global progress ---- */
+.global-progress{ height:8px; width:100vw; background:#e0e0e0; margin:0; position:relative; left:50%; transform:translateX(-50%); }
+#global-progress-fill{ height:100%; width:0%; background:linear-gradient(90deg,var(--brand),var(--brand2)); opacity:.6; transition:width .3s ease; }
+
+/* ---- Buttons ---- */
+.btn{
+  border-radius:12px; padding:12px 18px; font-weight:800; cursor:pointer;
+  border:1px solid #e5e7eb; background:#fff; color:#111827;
+  transition: transform .08s ease, box-shadow .2s ease, filter .2s ease;
+}
+.btn:focus{ outline:3px solid var(--ring); outline-offset:2px; }
+.btn:hover{ transform: translateY(-1px); }
+.btn-large{ font-size:1.05rem; padding:14px 22px; }
+.btn-primary{ background:var(--primary); border-color:var(--primary); color:#1a1a1a; box-shadow:0 8px 18px rgba(246,194,62,.35); }
+.btn-primary:hover{ background:var(--primaryHover); }
+.btn-secondary{ background:var(--secondary); border-color:var(--secondary); color:#fff; }
+.btn-secondary:hover{ background:var(--secondaryHover); }
+.btn.outline{ background:#fff; border-color:#e5e7eb; }
+.btn.action.locked{ opacity:.6; pointer-events:none; }
+
+/* ---- Sticky footer layout ---- */
+.page-wrap{ min-height:100vh; display:flex; flex-direction:column; }
+.page-content{ flex:1; }
+.app-footer{
+  margin-top:auto; color:#9ca3af; font-size:12px; text-align:center; padding:14px;
+  background:#0b1020; border-top:1px solid rgba(255,255,255,.06);
+}
+/* Sticky footer for scenario pages */
+html, body { height: 100%; }
+
+body.scenario {
+  min-height: 100vh;          /* fill the viewport */
+  display: flex;
+  flex-direction: column;     /* header, main, footer stack */
+}
+
+.wrap.scenario-flow {
+  flex: 1 0 auto;             /* main takes the remaining space */
+}
+
+/* whatever your footer element is */
+footer, [data-include="footer"] {
+  margin-top: auto;           /* push footer to bottom */
+}
+
+/* If your footer was fixed anywhere, kill it */
+footer.is-fixed { position: static !important; bottom: auto !important; }

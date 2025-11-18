@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Phishing Awareness – Introduction</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Poppins:wght@600;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/intro.css" />
+
+  <style>
+    /* ---- Intro page look ---- */
+    .intro-wrap{
+      min-height:auto;
+      display:grid; place-items:center;
+      padding: clamp(16px,4vw,40px);
+    }
+    .intro-card{
+      width:min(1200px,96vw);
+      background: radial-gradient(1000px 600px at 85% 40%, rgba(124,58,237,.12), transparent 60%),
+                  radial-gradient(900px 500px at 90% 60%, rgba(91,108,255,.10), transparent 60%),
+                  linear-gradient(180deg,#0b1020,#0a0f1f 60%, #0b1020);
+      border:1px solid rgba(255,255,255,.08);
+      border-radius:18px;
+      box-shadow:0 30px 80px rgba(0,0,0,.45);
+      color:#eef2ff;
+      padding: clamp(18px,4vw,36px);
+      display:grid;
+      grid-template-columns: 1fr minmax(260px,420px); /* text | ring */
+      gap: clamp(16px,3vw,36px);
+      align-items:center;
+    }
+    @media (max-width:760px){
+      .intro-card{ grid-template-columns:1fr; }
+    }
+
+    .intro-title{
+      margin:0 0 6px; font-family:Poppins,Inter,system-ui; font-weight:800;
+      font-size:clamp(28px,4.2vw,46px);
+      letter-spacing:.3px;
+      background:linear-gradient(90deg,#fff,#dbeafe 40%,#a5f3fc 80%);
+      -webkit-background-clip:text; background-clip:text; color:transparent;
+    }
+    .intro-sub{ margin:0 0 20px; color:#cbd5e1; font-weight:700; }
+    .intro-text{ color:#c7d2fe; line-height:1.7; }
+    .intro-text b{ color:#fff; }
+
+    .neon-ring{
+      position:relative; aspect-ratio:1/1;
+      width:100%; max-width:420px;
+      justify-self:center;
+      border-radius:50%;
+      background:
+        radial-gradient(circle at 50% 50%, rgba(0,0,0,.6) 0 45%, transparent 46% 100%),
+        conic-gradient(from 0deg, #f59e0b, #ef4444, #ec4899, #8b5cf6, #22d3ee, #10b981, #f59e0b);
+      filter:blur(.2px) saturate(110%);
+      box-shadow:inset 0 0 60px rgba(255,255,255,.06), 0 0 80px rgba(139,92,246,.25);
+    }
+    .neon-ring::after{
+      content:""; position:absolute; inset:8%; border-radius:50%;
+      background:url('assets/icons/lock.svg') center/22% no-repeat,
+                 radial-gradient(60% 60% at 50% 40%, rgba(255,255,255,.06), transparent 50%),
+                 linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+      filter:drop-shadow(0 6px 20px rgba(0,0,0,.6));
+    }
+
+    /* CTA / Loader area */
+    .cta-slot{
+      margin-top:20px;
+      display:flex; flex-direction:column; gap:8px;
+      align-items:flex-start;
+      max-width:320px;
+    }
+    .cta-slot .btn{ display:inline-block; width:auto; }
+    .fade-in{ animation:fadeIn .25s ease-out both; }
+    @keyframes fadeIn{ from{opacity:0; transform:translateY(6px);} to{opacity:1; transform:translateY(0);} }
+
+    /* Loader bar */
+    .loader{
+      width:100%; height:16px; border-radius:10px;
+      background:rgba(255,255,255,.08);
+      border:1px solid rgba(255,255,255,.15);
+      overflow:hidden;
+    }
+    .loader > div{
+      height:100%; width:0%;
+      background:linear-gradient(90deg,#8b5cf6,#22d3ee);
+      transition:width .18s linear;
+    }
+    .load-text{ margin-top:6px; color:#cbd5e1; font-weight:700; }
+    .load-text b{ color:#a5f3fc; }
+  </style>
+</head>
+<body>
+  <div class="page-wrap">
+    <div data-include="header"></div>
+
+    <main class="intro-wrap page-content">
+      <section class="intro-card">
+        <div>
+          <h1 class="intro-title">Welcome to Phishing Awareness Training.</h1>
+
+          <div class="intro-text">
+            <p>Phishing is one of the most common and damaging cyber threats today. Criminals send fake emails, SMS, or even make phone calls to trick people into giving away passwords, one-time codes, or financial information. These attacks can look real, using company logos, urgent wording, or fake websites to pressure you into acting quickly.</p>
+            <p>The goal of this training is simple: help you recognize phishing attempts before they cause harm. Through interactive scenarios, you will practice spotting suspicious messages and making safe choices in a risk-free environment.</p>
+
+            <h3>What You’ll Experience</h3>
+            <ul>
+              <li>Review realistic examples of emails, SMS, and phone call scenarios.</li>
+              <li>Learn to check sender details, links, attachments, and wording.</li>
+              <li>Decide whether to <b>Trust</b> or <b>Report</b>.</li>
+              <li>Receive instant feedback on your choice, with clear explanations.</li>
+              <li>Finish with a short awareness check.</li>
+            </ul>
+
+            <h3>Why It Matters</h3>
+            <p>One click on a phishing link can open the door to stolen data, financial loss, or even a company-wide breach. By building these skills, you’ll protect not only yourself but also your organization.</p>
+
+            <h3>What’s Included</h3>
+            <ul>
+              <li><b>Email phishing:</b> fake HR notices, invoices, password resets.</li>
+              <li><b>SMS / Smishing:</b> text scams with urgent payment or delivery requests.</li>
+              <li><b>Voice phishing (Vishing):</b> how callers trick people (covered in scenario text and quizzes).</li>
+              <li><b>Best practices:</b> what to do when something looks suspicious.</li>
+            </ul>
+          </div>
+
+          <div class="cta-slot">
+            <!-- Button (hidden first) -->
+            <a id="btn-start" class="btn btn-primary btn-large" href="scenarios.html" hidden>Let’s Get Started</a>
+            <!-- Loader (shown first) -->
+            <div class="loader" id="loader" aria-label="Loading">
+              <div id="load-bar"></div>
+            </div>
+            <div class="load-text" id="load-text">Loading <b id="load-pct">0%</b></div>
+          </div>
+        </div>
+
+        <div class="neon-ring" aria-hidden="true"></div>
+      </section>
+    </main>
+
+    <div data-include="footer"></div>
+  </div>
+
+  <script type="module" src="js/main.js"></script>
+  <script>
+    (function(){
+      const bar   = document.getElementById('load-bar');
+      const pct   = document.getElementById('load-pct');
+      const btn   = document.getElementById('btn-start');
+      const ldBox = document.getElementById('loader');
+      const ldTxt = document.getElementById('load-text');
+
+      let p = 0;
+      const timer = setInterval(() => {
+        p = Math.min(100, p + Math.floor(3 + Math.random()*7));
+        bar.style.width = p + '%';
+        pct.textContent = p + '%';
+        if (p >= 100) {
+          clearInterval(timer);
+          ldBox.hidden = true;
+          ldTxt.hidden = true;
+          btn.hidden = false;
+          btn.classList.add('fade-in');
+        }
+      }, 180);
+
+      // optional: allow click to almost finish
+      ldBox.addEventListener('click', () => { p = Math.max(p,95); });
+    })();
+  </script>
+</body>
+</html>
