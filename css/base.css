@@ -49,10 +49,6 @@ body{
 .badge{ display:inline-block; padding:2px 8px; border-radius:999px; background:#eef2ff; border:1px solid #c7d2fe; font-size:12px; }
 .pass-rule{ background:#ecfeff; border-color:#a5f3fc; }
 
-/* ---- Global progress ---- */
-.global-progress{ height:8px; width:100vw; background:#e0e0e0; margin:0; position:relative; left:50%; transform:translateX(-50%); }
-#global-progress-fill{ height:100%; width:0%; background:linear-gradient(90deg,var(--brand),var(--brand2)); opacity:.6; transition:width .3s ease; }
-
 /* ---- Buttons ---- */
 .btn{
   border-radius:12px; padding:12px 18px; font-weight:800; cursor:pointer;
