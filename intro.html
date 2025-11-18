@@ -125,7 +125,7 @@
 
           <div class="cta-slot">
             <!-- Button (hidden first) -->
-            <a id="btn-start" class="btn btn-primary btn-large" href="scenarios.html" hidden>Let’s Get Started</a>
+            <button id="btn-start" class="btn btn-primary btn-large" hidden>Let's Get Started</button>
             <!-- Loader (shown first) -->
             <div class="loader" id="loader" aria-label="Loading">
               <div id="load-bar"></div>
@@ -165,6 +165,26 @@
       // optional: allow click to almost finish
       ldBox.addEventListener('click', () => { p = Math.max(p,95); });
     })();
+
+    // Handle name prompt when clicking Let's Get Started
+    document.getElementById('btn-start').addEventListener('click', () => {
+      // Check if name already exists in session
+      const existingName = sessionStorage.getItem('userName');
+      if (existingName) {
+        // Name already exists, go directly to scenarios
+        window.location.href = 'scenarios.html';
+        return;
+      }
+      
+      // No name yet, prompt for it
+      const name = prompt('Please enter your name to begin:');
+      if (name && name.trim()) {
+        sessionStorage.setItem('userName', name.trim());
+        window.location.href = 'scenarios.html';
+      } else if (name !== null) {
+        alert('Please enter a valid name to continue.');
+      }
+    });
   </script>
 </body>
 </html>

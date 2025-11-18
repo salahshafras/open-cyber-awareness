@@ -100,7 +100,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
       fb.textContent = correct ? "✅ Correct." : `❌ Not quite. The phishing one is ${d.answer || "B"}.`;
 
-      localStorage.setItem(`scenario:${d.id}:done`, "1");
+      sessionStorage.setItem(`scenario:${d.id}:done`, "1");
       next.removeAttribute("disabled");
 
       buildExplain(d, correct);

@@ -1,4 +1,4 @@
-/* Scenario hub with progress + lock using localStorage */
+/* Scenario hub - session-based progress tracking */
 
 const scenarios = [
   { id:"s1",  title:"Time for change",       hint:"HR update",        thumb:"g1",  href:"scenario-1.html",  required:true },
@@ -17,7 +17,7 @@ const scenarios = [
 ];
 
 const doneKey = id => `scenario:${id}:done`;
-const isDone = id => localStorage.getItem(doneKey(id)) === "1";
+const isDone = id => sessionStorage.getItem(doneKey(id)) === "1";
 
 function stats(){
   const req = scenarios.filter(s => s.required);
@@ -28,6 +28,13 @@ function stats(){
 function render(){
   const grid = document.getElementById("scenario-grid");
   grid.innerHTML = "";
+
+  // Display greeting with user's name if available
+  const userName = sessionStorage.getItem('userName');
+  const greetingEl = document.getElementById('greeting');
+  if (greetingEl && userName) {
+    greetingEl.textContent = `Hi ${userName}, Select a scenario`;
+  }
 
   const { done, total, all, pct } = stats();
 
@@ -67,8 +74,3 @@ function render(){
 }
 
 document.addEventListener("DOMContentLoaded", render);
-
-/* On each scenario result page, call:
-   localStorage.setItem('scenario:s1:done','1');  // etc.
-   window.location.href = 'scenarios.html';
-*/
