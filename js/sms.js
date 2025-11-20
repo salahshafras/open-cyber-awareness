@@ -50,10 +50,9 @@ document.addEventListener("DOMContentLoaded", async () => {
   // Build right (phish) phone
   buildPhone("phone-b", d.right, "from");
 
-  // Interaction: find 3 differences
+  // Interaction: find differences
   const needed = new Set(d.differences || ["from", "number", "link"]);
   const foundKeys = new Set();
-  const meter = document.getElementById("found-count");
 
   step_1.addEventListener("click", e => {
     const t = e.target.closest(".clickable-area");
@@ -66,7 +65,6 @@ document.addEventListener("DOMContentLoaded", async () => {
       .forEach(el => el.classList.add("found"));
 
     foundKeys.add(key);
-    meter.textContent = `${foundKeys.size}`;
 
     if (foundKeys.size === needed.size) {
       step_2.hidden = false;
@@ -133,7 +131,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
           <div class="message-header">
             <p class="contact-name clickable-area" data-key="from">${data.from}</p>
-            <p class="contact-number clickable-area" data-key="number">${data.number}</p>
+            ${data.number ? `<p class="contact-number clickable-area" data-key="number">${data.number}</p>` : ''}
           </div>
 
           <div class="messages-area">

@@ -1,26 +1,25 @@
 {
   "id": "e5",
-  "title": "Security alert — unusual activity",
+  "title": "Hotel reservation update",
   "brand": "NexaTrust",
   "left": {
-    "from": "IT Security <security@nexatrust.com>",
-    "to": "alex.chen@nexatrust.com",
-    "subject": "Suspicious login attempt detected",
-    "bodyHtml": "<p>Hi Alex,</p><p>We noticed a login from an unfamiliar device.</p><h4>What should I do?</h4><p>Review your recent sessions in the <a class='safe' href='#'>Security Center</a> on the intranet.</p>"
+    "from": "Travel Desk <travel@nexatrust.com>",
+    "to": "emily.raine@nexatrust.com",
+    "subject": "Hotel reservation update",
+    "bodyHtml": "<p>Hi Emily,</p><p>Your approved hotel reservation has been added to your Travel Portal dashboard.</p><p>You can make changes directly from the <a class='safe' href='#'>portal</a>.</p>"
   },
   "right": {
-    "from": "Security Alert <alert@nexatrust-security.com>",
-    "to": "alex.chen@outlook.com",
-    "subject": "Account locked — verify identity now",
-    "bodyHtml": "<p>Your account has been temporarily locked. <a class='click-here' href='#'>Verify your identity</a> to unlock.</p><p>Security</p>"
+    "from": "Corporate Travel Partner <bookings@nexatrust-agency.com>",
+    "to": "emily.raine@nexatrust.com",
+    "subject": "Booking confirmation pending — verify now",
+    "bodyHtml": "<p>Dear employee,</p><p>Your upcoming trip requires confirmation.</p><p>Please <a class='click-here' href='#'>verify your booking information and provide payment details</a> to secure the reservation.</p>"
   },
   "answer": "B",
-  "differences": ["from", "to", "link"],
-  "explainTitle": "Well spotted.",
+  "differences": ["from", "greeting", "link"],
+  "explainTitle": "That's right!",
   "explainPoints": [
-    "Suspicious domain: <b>nexatrust-security.com</b> is not the official domain.",
-    "Sent to personal email (<b>outlook.com</b>) instead of work address.",
-    "Demands immediate action via link. Real security alerts direct you to the Security Center.",
-    "Creates panic ('account locked') to bypass your judgment."
+    "<b>Fake vendor impersonation:</b> Email B uses \"nexatrust-agency.com\" which mimics external partners but is not official. Email A uses the real \"nexatrust.com\" domain.",
+    "<b>Generic greeting + verification link:</b> Email B uses \"Dear employee\" (generic) and demands verification. Email A references actual approved bookings with personalized greeting.",
+    "<b>Payment information request:</b> Email B asks to \"provide payment details\" to secure reservation. Corporate travel never asks employees to enter card info."
   ]
 }

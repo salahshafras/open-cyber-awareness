@@ -3,22 +3,10 @@
   "title": "Package delivery notification",
   "brand": "NexaTrust",
   "left": {
-    "from": "NexaTrust-Delivery",
-    "number": "+1 (844) 792-5618",
+    "from": "NexaTrust",
     "messages": [
       {
-        "text": "URGENT: Delivery attempt failed!",
-        "time": "10:45 AM",
-        "type": "received",
-        "hasLink": true
-      },
-      {
-        "text": "What happened?",
-        "time": "10:46 AM",
-        "type": "sent"
-      },
-      {
-        "text": "Address incomplete. Pay $2.99 fee to reschedule: https://nexatrust-delvry.com/pkg/9x4k2",
+        "text": "Delivery issue detected. Your package is pending due to address verification failure. Resolve now: https://nexatrust-delvy-check.com/412u",
         "time": "10:47 AM",
         "type": "received",
         "hasLink": true
@@ -26,33 +14,22 @@
     ]
   },
   "right": {
-    "from": "NexaTrust Mailroom",
-    "number": "+1 (555) 0123",
+    "from": "NexaTrust",
     "messages": [
       {
-        "text": "Hi! Package arriving tomorrow 2-4 PM.",
-        "time": "10:32 AM",
-        "type": "received"
-      },
-      {
-        "text": "Thanks! Where can I track it?",
-        "time": "10:33 AM",
-        "type": "sent"
-      },
-      {
-        "text": "Check the Mailroom portal anytime or call Reception at ext. 2500.",
+        "text": "Hi! Your delivery is scheduled tomorrow from 2–4 PM. You can review the schedule anytime on the Mailroom Portal.",
         "time": "10:34 AM",
-        "type": "received"
+        "type": "received",
+        "hasLink": true
       }
     ]
   },
   "answer": "A",
-  "differences": ["from", "number", "message-1"],
+  "differences": ["message-1"],
   "explainTitle": "Correct!",
   "explainPoints": [
-    "Suspicious sender format: <b>'NexaTrust-Delivery'</b> with a hyphen instead of 'NexaTrust Mailroom'.",
-    "Unknown number: Official messages come from the company's verified short code +1 (555) 0123.",
-    "First message is suspicious: The urgent 'URGENT' and 'failed' language creates panic, while the legitimate version is friendly and informative.",
-    "Malicious link with payment: The URL <b>nexatrust-delvry.com</b> is fake and asks for money. Real tracking is free through the portal."
+    "<b>Scam link (nexatrust-delvy-check.com):</b> SMS A contains a fake domain link for 'address verification'. SMS B directs to the legitimate Mailroom Portal.",
+    "<b>Urgency and problem framing:</b> SMS A creates panic with 'issue detected' and 'failure'. SMS B provides friendly, informational scheduling confirmation.",
+    "<b>Suspicious request:</b> SMS A demands immediate action to 'resolve' a fabricated problem. SMS B simply informs about delivery schedule with no action required."
   ]
 }

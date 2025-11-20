@@ -1,37 +1,35 @@
 {
   "id": "sms2",
-  "title": "Payroll notification",
+  "title": "Bank / Card Alert",
   "brand": "NexaTrust",
   "left": {
-    "from": "NexaTrust HR",
-    "number": "55512",
+    "from": "NexaTrust",
     "messages": [
       {
-        "text": "Your payroll for period ending 11/15 has been processed. Amount: $3,247.82 deposited to account ending in 4891. View details in Employee Portal > Payroll or contact HR at ext. 3050.",
-        "time": "9:15 AM",
-        "type": "received"
+        "text": "A transaction alert was generated on your corporate card. If this wasn't you, report it via the Finance Portal.",
+        "time": "11:12 AM",
+        "type": "received",
+        "hasLink": true
       }
     ]
   },
   "right": {
-    "from": "NexaTrust Payroll",
-    "number": "+1-866-PAY-NOW",
+    "from": "NexaTrust",
     "messages": [
       {
-        "text": "⚠️ ALERT: Suspicious activity on your payroll account! Your last deposit is on HOLD pending verification. Click here immediately to confirm identity or funds will be returned: https://nexatrust-verify.com/urgent/login?emp=5829",
-        "time": "2:18 PM",
+        "text": "Security check: Your corporate card is temporarily restricted. Restore access: https://nexatrust-securecard.com/login",
+        "time": "11:13 AM",
         "type": "received",
         "hasLink": true
       }
     ]
   },
   "answer": "B",
-  "differences": ["from", "number", "message-1"],
+  "differences": ["message-1"],
   "explainTitle": "Well done!",
   "explainPoints": [
-    "Different sender name: <b>'NexaTrust Payroll'</b> vs the legitimate 'NexaTrust HR'.",
-    "Suspicious number format: <b>'+1-866-PAY-NOW'</b> is unusual. Real company texts use short codes like '55512'.",
-    "Message content is alarming: The phishing message uses urgent language with symbols (⚠️), threats about funds being 'on HOLD', and demands immediate action. The legitimate message is calm, detailed, and informative.",
-    "Malicious link: <b>nexatrust-verify.com</b> is fake. Real payroll details are only in the Employee Portal."
+    "<b>Fake restriction claim:</b> SMS B falsely states the card is 'temporarily restricted'. SMS A simply alerts about a transaction.",
+    "<b>Fake link (nexatrust-securecard.com):</b> SMS B contains a scam domain for 'restoring access'. SMS A directs to the legitimate Finance Portal.",
+    "<b>Level of urgency:</b> SMS B creates panic with 'Security check' and demands immediate action. SMS A is calm and informational, offering optional reporting."
   ]
 }

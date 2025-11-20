@@ -1,26 +1,25 @@
 {
   "id": "e3",
-  "title": "Delivery notice — verify address",
+  "title": "Scheduled delivery confirmation",
   "brand": "NexaTrust",
   "left": {
     "from": "Logistics Desk <logistics@nexatrust.com>",
     "to": "kian.oka@nexatrust.com",
-    "subject": "Office delivery — confirm drop-off time",
-    "bodyHtml": "<p>Hi Kian,</p><p>Your office package arrives tomorrow. If time changes, go to the <a class='safe' href='#'>Logistics portal</a> and update your slot.</p>"
+    "subject": "Scheduled delivery confirmation",
+    "bodyHtml": "<p>Hi Kian,</p><p>Your equipment delivery is scheduled for tomorrow.</p><p>Track or modify your delivery in the <a class='safe' href='#'>Logistics Portal</a>.</p><p>We will not request payments for internal deliveries.</p>"
   },
   "right": {
-    "from": "Courier Service <notify@delivry-nexatrust.com>",
-    "to": "kian.oka@yahoo.com",
-    "subject": "Package held — pay small fee to release",
-    "bodyHtml": "<p>Action needed to release your package. Please <a class='click-here' href='#'>confirm address and pay fee</a> now.</p>"
+    "from": "Delivery Team <notify@nxtrust-logistics.com>",
+    "to": "kian.oka@nexatrust.com",
+    "subject": "Package held — address mismatch",
+    "bodyHtml": "<p>Your package is on hold due to an address conflict.</p><p>Please <a class='click-here' href='#'>validate your address and pay a small release fee</a>.</p><p>Processing must be completed within 2 hours.</p>"
   },
   "answer": "B",
-  "differences": ["from", "to", "link"],
-  "explainTitle": "Exactly.",
+  "differences": ["from", "subject", "link"],
+  "explainTitle": "That's right!",
   "explainPoints": [
-    "Look-alike sender: <b>delivry-nexatrust.com</b> imitates the brand.",
-    "Personal email target instead of your corporate address.",
-    "Requests payment via a link. Legit deliveries are handled by the Logistics portal or official courier apps.",
-    "Classic 'held package' lure designed to capture card details."
+    "<b>Domain distortion:</b> Email B uses \"nxtrust-logistics.com\" which is visually similar but incorrect. Email A uses the real \"nexatrust.com\" domain.",
+    "<b>Short deadline pressure:</b> Email B demands completion within \"2 hours\" forcing urgency, a classic phishing tactic. Email A provides normal scheduling info.",
+    "<b>Unexpected payment request:</b> Email B requests a release fee. Email A explicitly states \"We will not request payments for internal deliveries.\""
   ]
 }

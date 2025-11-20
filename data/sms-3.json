@@ -1,64 +1,35 @@
-{
+﻿{
   "id": "sms3",
-  "title": "IT system update",
+  "title": "Account Verification",
   "brand": "NexaTrust",
   "left": {
-    "from": "IT-Support",
-    "number": "1-877-659-2847",
+    "from": "NexaTrust",
     "messages": [
       {
-        "text": "URGENT: Sceduled maintenance requires password verification.",
-        "time": "3:42 PM",
+        "text": "Reminder: Routine system checks will run this week. No steps are required unless notified through the Employee Portal.",
+        "time": "9:02 AM",
         "type": "received",
         "hasLink": true
-      },
-      {
-        "text": "Verify credentials now to maintain access:",
-        "time": "3:42 PM",
-        "type": "received"
-      },
-      {
-        "text": "https://nexatrust-itsupport.net/verify",
-        "time": "3:43 PM",
-        "type": "received",
-        "hasLink": true
-      },
-      {
-        "text": "Failure to verify = account locked!",
-        "time": "3:43 PM",
-        "type": "received"
       }
     ]
   },
   "right": {
-    "from": "IT Support",
-    "number": "55500",
+    "from": "NexaTrust",
     "messages": [
       {
-        "text": "Scheduled maintenance tonight 11 PM - 2 AM.",
-        "time": "3:30 PM",
-        "type": "received"
-      },
-      {
-        "text": "Email and portal access may be briefly interrupted.",
-        "time": "3:30 PM",
-        "type": "received"
-      },
-      {
-        "text": "No action needed. Questions? Call ext. 4000.",
-        "time": "3:31 PM",
-        "type": "received"
+        "text": "Your profile requires immediate verification. Confirm your details to prevent access interruption: https://nexatrust-authconfirm.com/update",
+        "time": "9:03 AM",
+        "type": "received",
+        "hasLink": true
       }
     ]
   },
-  "answer": "A",
-  "differences": ["from", "number", "message-1"],
-  "explainTitle": "Excellent!",
+  "answer": "B",
+  "differences": ["message-1"],
+  "explainTitle": "Correct!",
   "explainPoints": [
-    "Sender name format: <b>'IT-Support'</b> with hyphen vs legitimate 'IT Support' with space.",
-    "Wrong number format: <b>'1-877-659-2847'</b> looks like a toll-free number. Real IT uses short code '55500'.",
-    "Typo in first message: 'Sceduled' should be 'Scheduled' - professional IT communications are proofread.",
-    "Suspicious link domain: <b>nexatrust-itsupport.net</b> is fake. Real IT never asks for credentials via text links.",
-    "Threatening tone: 'account locked!' creates panic. Legitimate IT messages are calm and helpful."
+    "<b>Verification claim:</b> SMS B falsely demands 'immediate verification' of your profile. SMS A simply reminds about routine system checks with no action needed.",
+    "<b>Login/update link (nexatrust-authconfirm.com):</b> SMS B contains a fake domain asking to 'confirm details'. SMS A states notifications come through the Employee Portal.",
+    "<b>Access interruption threat:</b> SMS B uses scare tactics warning to 'prevent access interruption'. SMS A has a calm, informational tone with no threats."
   ]
 }

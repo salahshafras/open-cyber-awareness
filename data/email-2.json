@@ -1,26 +1,25 @@
 {
   "id": "e2",
-  "title": "Invoice attachment",
+  "title": "Updated invoice — immediate review required",
   "brand": "NexaTrust",
   "left": {
-    "from": "Accounts Payable <ap@nexatrust.com>",
+    "from": "Accounts Processing <ap-docs@nexatrustdocs.com>",
     "to": "mara.banks@nexatrust.com",
-    "subject": "Q3 vendor invoice",
-    "bodyHtml": "<p>Hi Mara,</p><p>The approved vendor invoice is now in the Finance portal.</p><h4>How to view it?</h4><p>Open the <a class='safe' href='#'>Finance portal</a> (Procurement > Invoices). No files are sent by email.</p>"
+    "subject": "Updated invoice — immediate review required",
+    "bodyHtml": "<p>Hi Mara,</p><p>The vendor's updated invoice could not be processed.</p><p>Please review the <a class='click-here' href='#'>attached PDF</a> and approve the updated amount.</p><p>Failure to approve in time may delay month-end closing.</p>"
   },
   "right": {
-    "from": "Accounts Payable <ap@nexatrust-pay.com>",
-    "to": "mara.banks@gmail.com",
-    "subject": "Invoice attached - action required",
-    "bodyHtml": "<p>Hi,</p><p>Please review the attached invoice and <a class='click-here' href='#'>confirm payment</a> within 24 hours to avoid late fees.</p><p>Regards,<br>AP</p>"
+    "from": "Accounts Payable <accounts@nexatrust.com>",
+    "to": "mara.banks@nexatrust.com",
+    "subject": "Vendor invoice posted in Finance Portal",
+    "bodyHtml": "<p>Hi Mara,</p><p>The approved vendor invoice has been posted.</p><p>View it through the <a class='safe' href='#'>Finance Portal</a> under \"Invoices.\"</p><p>No sensitive documents are distributed by email.</p>"
   },
-  "answer": "B",
-  "differences": ["from", "to", "link"],
-  "explainTitle": "Good catch.",
+  "answer": "A",
+  "differences": ["from", "subject", "link"],
+  "explainTitle": "That's right!",
   "explainPoints": [
-    "Sender domain mismatch: <b>nexatrust-pay.com</b> is not your official domain.",
-    "Sent to personal mailbox instead of <b>@nexatrust.com</b> work email.",
-    "Asks to act on an email link and mentions an attachment - your policy is to use the Finance portal.",
-    "Creates false urgency (\"24 hours\") to rush you."
+    "<b>Subtle domain look-alike:</b> Email A uses \"nexatrustdocs.com\" which appears official but differs from the real \"nexatrust.com\" domain in email B.",
+    "<b>Urgency & consequence framing:</b> Email A uses threat of delayed month-end closing to pressure quick action, while email B is informational.",
+    "<b>Attachment lure:</b> Email A mentions a PDF attachment for malware delivery. Email B's legit policy states \"No sensitive documents are distributed by email\" and directs to the Finance Portal."
   ]
 }

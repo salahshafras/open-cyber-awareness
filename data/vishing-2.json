@@ -1,92 +1,71 @@
-{
+﻿{
   "id": "vishing2",
-  "title": "Bank Fraud Department Call",
+  "title": "Bank Fraud Call",
   "left": {
-    "callerName": "First National Bank",
-    "callerNumber": "+1 (555) 0200",
-    "avatar": "🏦",
+    "callerName": "NexaTrust",
+    "callerNumber": "",
+    "avatar": "",
     "transcript": [
       {
         "speaker": "Caller",
-        "text": "Good afternoon, this is Sarah from First National Bank's fraud prevention team."
+        "text": "This is NexaTrust Finance. We detected fraudulent activity on your corporate card."
       },
       {
         "speaker": "You",
-        "text": "Hi Sarah, is everything okay with my account?"
+        "text": "What happened?"
       },
       {
         "speaker": "Caller",
-        "text": "We noticed an unusual transaction and wanted to verify it with you. Did you make a purchase at Best Buy for $1,247.99?"
+        "text": "A suspicious purchase was attempted. To protect your account, I need to confirm your card number and PIN right away."
       },
       {
         "speaker": "You",
-        "text": "No, I didn't make that purchase."
+        "text": "My PIN? Why would you need that?"
       },
       {
         "speaker": "Caller",
-        "text": "Thank you for confirming. I'll block that transaction immediately. You'll receive a confirmation email and a new card within 5-7 business days. Is there anything else I can help you with?"
+        "text": "If we don't verify your identity, your card will be suspended and the transaction may be processed."
       },
       {
         "speaker": "You",
-        "text": "No, that's all. Thank you for catching that."
-      },
-      {
-        "speaker": "Caller",
-        "text": "You're welcome. Have a great day, and remember you can always check your account activity through our mobile app or online banking."
+        "text": "This seems odd"
       }
     ]
   },
   "right": {
-    "callerName": "Bank Security Alert",
-    "callerNumber": "+1 (888) 456-7890",
-    "avatar": "⚠️",
+    "callerName": "NexaTrust",
+    "callerNumber": "",
+    "avatar": "",
     "transcript": [
       {
         "speaker": "Caller",
-        "text": "FRAUD ALERT! This is your bank's security department. Your account has been breached!",
-        "suspicious": true,
-        "key": "panic-opening"
+        "text": "Hi, this is Priya from NexaTrust Finance. Is now a good time?"
       },
       {
         "speaker": "You",
-        "text": "Oh no! What should I do?"
+        "text": "Sure, what's going on?"
       },
       {
         "speaker": "Caller",
-        "text": "I need to verify your identity immediately. Please provide your full card number, expiration date, and the CVV code on the back.",
-        "suspicious": true,
-        "key": "card-details"
+        "text": "We noticed a declined transaction on your expense card. No action is required. When you have time, just review it in the Finance Portal."
       },
       {
         "speaker": "You",
-        "text": "All of that? Isn't that sensitive information?"
+        "text": "Okay, thanks."
       },
       {
         "speaker": "Caller",
-        "text": "Yes, but we need it RIGHT NOW to stop the fraudulent charges! Also, what's your online banking password? We need to lock the account!",
-        "suspicious": true,
-        "key": "password-demand"
-      },
-      {
-        "speaker": "You",
-        "text": "This doesn't feel right..."
-      },
-      {
-        "speaker": "Caller",
-        "text": "If you don't act now, you'll lose all your money! Don't hang up or we can't help you!",
-        "suspicious": true,
-        "key": "threat"
+        "text": "Of course  and remember, we never ask for card numbers or PINs over the phone."
       }
     ]
   },
-  "answer": "B",
-  "differences": ["panic-opening", "card-details", "password-demand", "threat"],
-  "explainTitle": "Excellent! You identified the vishing scam.",
+  "answer": "A",
+  "differences": [],
+  "explainTitle": "Correct!",
   "explainPoints": [
-    "<b>Fear-based manipulation:</b> The scammer opens with 'FRAUD ALERT!' and 'breached' to create immediate panic. Real banks remain calm and explain the situation clearly.",
-    "<b>Requesting full card details:</b> Legitimate banks <b>NEVER</b> ask for your full card number, CVV, or PIN over the phone. They already have this information on file.",
-    "<b>Demanding passwords:</b> Banks will never ask for your online banking password or any other authentication credentials during a phone call.",
-    "<b>Using threats and pressure:</b> 'You'll lose all your money!' and 'Don't hang up!' are classic scare tactics. Real banks allow you time to think and offer to call back.",
-    "<b>Generic caller ID:</b> The number appears as 'Bank Security Alert' which can be spoofed. Always hang up and call your bank using the official number on your card or statement."
+    "<b>Requests card number and PIN:</b> Call A demands your card number and PIN 'right away'. Call B explicitly states 'we never ask for card numbers or PINs over the phone'.",
+    "<b>Creates urgency and threats:</b> Call A warns 'your card will be suspended and the transaction may be processed' to pressure immediate action. Call B calmly states 'no action is required'.",
+    "<b>No proper introduction:</b> Call A doesn't provide a name or verify if it's a good time. Call B introduces herself as 'Priya' and politely asks 'Is now a good time?'.",
+    "<b>Self-service solution:</b> Call B directs you to the Finance Portal where you can review the issue yourself. Call A tries to handle everything over the phone immediately."
   ]
 }

@@ -1,26 +1,25 @@
 {
   "id": "e4",
-  "title": "Benefits enrollment update",
+  "title": "Annual benefits review notice",
   "brand": "NexaTrust",
   "left": {
-    "from": "HR Benefits <benefits@nexatrust.com>",
-    "to": "sam.rivera@nexatrust.com",
-    "subject": "Annual benefits — open enrollment",
-    "bodyHtml": "<p>Hello Sam,</p><p>You have until the end of the month to review your health plan choices.</p><h4>Where do I enroll?</h4><p>Visit the <a class='safe' href='#'>HR portal</a> under Benefits → Enrollment.</p>"
+    "from": "Benefits Support <benefits@wellness-nexatrust.com>",
+    "to": "lina.thorn@nexatrust.com",
+    "subject": "Benefits update — action required",
+    "bodyHtml": "<p>Hi Lina,</p><p>Your health benefits profile shows missing information.</p><p>To avoid coverage suspension, <a class='click-here' href='#'>log in and complete your details using the link below</a>.</p>"
   },
   "right": {
-    "from": "Benefits Team <enroll@nexatrust-benefits.com>",
-    "to": "sam.rivera@hotmail.com",
-    "subject": "Benefits expiring — update now",
-    "bodyHtml": "<p>Hi,</p><p>Your coverage will lapse unless you <a class='click-here' href='#'>re-enroll immediately</a>.</p><p>HR</p>"
+    "from": "NexaTrust HR Benefits <benefits@nexatrust.com>",
+    "to": "lina.thorn@nexatrust.com",
+    "subject": "Annual benefits review notice",
+    "bodyHtml": "<p>Hi Lina,</p><p>Our annual benefits review opens next month.</p><p>You can access your benefits details via the <a class='safe' href='#'>HR Portal</a> on the intranet.</p><p>We will not request sensitive updates by email.</p>"
   },
-  "answer": "B",
-  "differences": ["from", "to", "link"],
-  "explainTitle": "Nice work.",
+  "answer": "A",
+  "differences": ["from", "subject", "link"],
+  "explainTitle": "That's right!",
   "explainPoints": [
-    "Fake subdomain: <b>nexatrust-benefits.com</b> is not the real company domain.",
-    "Sent to personal email (<b>hotmail.com</b>) instead of corporate address.",
-    "Uses urgent wording and a link to bypass the official HR portal.",
-    "Real enrollment happens through the HR portal, not email links."
+    "<b>External wellness-domain:</b> Email A uses \"wellness-nexatrust.com\" which is not an official HR domain. Email B uses the real \"nexatrust.com\" domain.",
+    "<b>Fear-based wording:</b> Email A threatens \"coverage suspension\" which is not used by HR. Email B provides normal informational notice about annual review.",
+    "<b>Requesting sensitive updates:</b> Email A asks to \"complete details\" via email link, violating HR security policy. Email B states \"We will not request sensitive updates by email.\""
   ]
 }

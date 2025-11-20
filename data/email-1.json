@@ -1,25 +1,25 @@
 {
   "id": "e1",
-  "title": "Password change reminder",
+  "title": "Password rotation window",
   "brand": "NexaTrust",
   "left": {
-    "from": "NexaTrust IT <passwordnotice@nexatrust.com>",
+    "from": "NexaTrust IT Security <security@nexatrust.com>",
     "to": "jonah.stokes@nexatrust.com",
-    "subject": "Change your password now",
-    "bodyHtml": "<p>Dear Jonah,</p><p>If you don't change your password, it will expire in 14 days and you may lose access to key apps.</p><h4>How do I change my password?</h4><p>Go to the <a class='safe' href='#'>HR portal</a> from the intranet.</p>"
+    "subject": "Password rotation window",
+    "bodyHtml": "<p>Hi Jonah,</p><p>We will begin scheduled password rotations next week.</p><p>You can update your password anytime through the Internal Security Portal.</p><p>No direct login links will be emailed.</p>"
   },
   "right": {
-    "from": "NexaTrust IT <passwordnotice@nexatrvst.com>",
-    "to": "jonah.stokes@gmail.com",
-    "subject": "Change your password now",
-    "bodyHtml": "<p>Dear Jonah,</p><p>If you don't change your password, it will expire in 14 days and you may lose access to key apps.</p><h4>How do I change my password?</h4><p>Change your password now by <a class='click-here' href='#'>clicking here and entering your credentials</a>.</p>"
+    "from": "NexaTrust IT <notice@secure-nexatrust.com>",
+    "to": "jonah.stokes@nexatrust.com",
+    "subject": "Immediate password verification required",
+    "bodyHtml": "<p>Dear employee,</p><p>Your credentials are flagged due to unusual access.</p><p>Please verify your password using the <a class='click-here' href='#'>security link below</a> to prevent deactivation.</p><p>This verification is mandatory.</p>"
   },
   "answer": "B",
-  "differences": ["from", "to", "link"],
+  "differences": ["from", "subject", "link"],
   "explainTitle": "That's right!",
   "explainPoints": [
-    "Look-alike domain: <b>nexatrvst.com</b> swaps the letter \"u\" for \"v\". Attackers use tiny changes like this to trick people into trusting the sender.",
-    "Wrong mailbox: it was sent to a <b>personal</b> address (gmail), not your <b>@nexatrust.com</b> work address. Password and account notices should stay within company email.",
-    "Unsafe path: it asks you to <b>\"click here\"</b> and enter credentials. Real NexaTrust guidance tells you to open the known HR/IT portal from the intranet or bookmarks—no login links in email."
+    "<b>Sender domain trick:</b> \"secure-nexatrust.com\" looks legitimate but is not the real corporate domain. The legit email uses the actual \"nexatrust.com\" domain.",
+    "<b>Subject urgency:</b> The phishing subject \"Immediate password verification required\" creates false urgency, while the legit one announces \"Password rotation window\" as routine maintenance.",
+    "<b>Instruction mismatch:</b> Legit states \"No direct login links will be emailed\" and directs to the portal manually. Phish demands clicking a \"security link below\" to verify credentials."
   ]
 }

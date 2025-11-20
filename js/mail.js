@@ -175,8 +175,9 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   // ---------- Step 3 ----------
   function buildExplain(data, correct){
-    // Clone the *phish* email (right side)
-    const clone = document.querySelectorAll("#step-1 .mail")[1].cloneNode(true);
+    // Clone the *phish* email based on answer (A=left[0], B=right[1])
+    const phishIndex = (data.answer === "A") ? 0 : 1;
+    const clone = document.querySelectorAll("#step-1 .mail")[phishIndex].cloneNode(true);
     let n = 0;
     clone.querySelectorAll('.pair[data-key]').forEach(el => {
       const key = el.dataset.key;

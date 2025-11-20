@@ -2,72 +2,80 @@
   "id": "vishing1",
   "title": "IT Support Security Alert",
   "left": {
-    "callerName": "IT Department",
-    "callerNumber": "+1 (555) 0100",
-    "avatar": "💼",
+    "callerName": "NexaTrust",
+    "callerNumber": "Incoming Call",
+    "avatar": "📞",
     "transcript": [
       {
         "speaker": "Caller",
-        "text": "Hi, this is Marcus from IT Support. How are you today?"
+        "text": "Hi, this is Daniel from the NexaTrust IT Support Desk. How are you today?"
       },
       {
         "speaker": "You",
-        "text": "I'm good, thanks. What can I help you with?"
+        "text": "I'm good. What's going on?"
       },
       {
         "speaker": "Caller",
-        "text": "We're doing routine security updates on all company accounts. I need to verify your employee ID for our records."
+        "text": "We detected a minor sync issue with your access profile. No credentials are required — I'm just confirming whether you recently changed any account preferences."
       },
       {
         "speaker": "You",
-        "text": "Sure, it's on my badge. Let me check the HR portal first."
+        "text": "No, I haven't changed anything."
       },
       {
         "speaker": "Caller",
-        "text": "No problem. You can also submit a ticket through the IT portal if you prefer, and we'll follow up via email."
+        "text": "Great, I'll fix it from our side. If we ever need additional verification, it will come through the official IT Portal, not by phone."
+      },
+      {
+        "speaker": "You",
+        "text": "Perfect. Thanks for checking."
       }
     ]
   },
   "right": {
-    "callerName": "IT Security Team",
-    "callerNumber": "+1 (844) 729-8844",
-    "avatar": "🔒",
+    "callerName": "NexaTrust",
+    "callerNumber": "Incoming Call",
+    "avatar": "📞",
     "transcript": [
       {
         "speaker": "Caller",
-        "text": "URGENT! This is IT Security. Your account has been compromised!",
+        "text": "URGENT! This is NexaTrust IT Security. Your account is being accessed right now from an untrusted device!",
         "suspicious": true,
-        "key": "opening"
+        "key": "conversation"
       },
       {
         "speaker": "You",
-        "text": "What? Really? What happened?"
+        "text": "What? Are you sure?"
       },
       {
         "speaker": "Caller",
-        "text": "We detected suspicious login attempts. I need your password immediately to secure your account before it's locked!",
+        "text": "Yes. To stop the breach, I need your employee ID and password immediately so I can secure your account.",
         "suspicious": true,
-        "key": "password-request"
+        "key": "conversation"
       },
       {
         "speaker": "You",
-        "text": "My password? Are you sure that's the right procedure?"
+        "text": "My password? Shouldn't that stay private?"
       },
       {
         "speaker": "Caller",
-        "text": "Yes! We don't have time. Also, what's the code from your authenticator app? We need it NOW!",
+        "text": "If you don't verify it now, your access will be locked and flagged for investigation.",
         "suspicious": true,
-        "key": "urgency"
+        "key": "conversation"
+      },
+      {
+        "speaker": "You",
+        "text": "That doesn't sound right…"
       }
     ]
   },
   "answer": "B",
-  "differences": ["opening", "password-request", "urgency"],
+  "differences": ["conversation"],
   "explainTitle": "Correct! You spotted the vishing attempt.",
   "explainPoints": [
-    "<b>Aggressive urgency and panic:</b> The scammer uses 'URGENT!' and 'NOW!' to pressure you into acting without thinking. Legitimate IT staff remain calm and professional.",
-    "<b>Requesting passwords directly:</b> Real IT departments <b>NEVER</b> ask for your password, PIN, or MFA codes over the phone. They can reset accounts without this information.",
-    "<b>Suspicious phone number:</b> The number +1 (844) 729-8844 is an external toll-free number, not an internal extension. Always verify by calling the official IT helpdesk number.",
-    "<b>No verification offered:</b> Legitimate IT staff will provide their employee ID, offer to send confirmation emails, or suggest you call back through official channels."
+    "<b>Aggressive urgency and panic:</b> Call B uses 'URGENT!' and claims your account is 'being accessed right now' to pressure immediate action. Call A calmly discusses a 'minor sync issue'.",
+    "<b>Requesting passwords directly:</b> Call B demands 'employee ID and password immediately'. Real IT departments <b>NEVER</b> ask for passwords over the phone. Call A explicitly states 'No credentials are required'.",
+    "<b>Threatening consequences:</b> Call B threatens that 'access will be locked and flagged for investigation' to create fear. Call A offers to fix the issue from their side without threats.",
+    "<b>No verification offered:</b> Call B pressures for immediate action without offering alternative verification. Call A states verification will come 'through the official IT Portal, not by phone'."
   ]
 }
