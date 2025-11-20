@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vishing 1 – IT Support Alert</title>
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/vishing.css" />
+</head>
+<body class="scenario vishing">
+  <div data-include="header"></div>
+
+  <main class="wrap scenario-flow">
+    <!-- STEP 1 -->
+    <section class="step" id="step-1">
+      <h2 id="sc-title">Voice Phishing Scenario</h2>
+      <p class="muted" id="sc-intro">Listen to both phone calls and identify the <b>THREE</b> suspicious statements in the conversation.</p>
+
+      <div class="compare">
+        <div class="call-card">
+          <div class="label-ab">A</div>
+          <div id="call-a"></div>
+        </div>
+
+        <div class="call-card">
+          <div class="label-ab">B</div>
+          <div id="call-b"></div>
+        </div>
+      </div>
+
+      <p class="found-meter">Found: <span id="found-count">0</span>/3 suspicious statements</p>
+    </section>
+
+    <!-- STEP 2 -->
+    <section class="step wide" id="step-2" aria-disabled="true" hidden>
+      <h2 class="center">Well done</h2>
+      <p class="center muted">You spotted the suspicious statements. Which call is the vishing attempt?</p>
+
+      <div class="pick">
+        <button class="pick-btn" data-choice="A">
+          <span class="circle">A</span>
+          <span class="report">
+            <span class="report-text">Report it now!</span>
+          </span>
+        </button>
+        <button class="pick-btn" data-choice="B">
+          <span class="circle">B</span>
+          <span class="report">
+            <span class="report-text">Report it now!</span>
+          </span>
+        </button>
+      </div>
+
+      <div id="pick-feedback" class="pick-feedback center" aria-live="polite"></div>
+    </section>
+
+    <!-- STEP 3 -->
+    <section class="step wide" id="step-3" hidden>
+      <div class="explain">
+        <div class="ex-points">
+          <h2 id="ex-title">That's right!</h2>
+          <ol id="ex-list"></ol>
+          <div class="actions">
+            <a class="btn outline" href="scenarios.html">← Return to menu</a>
+            <a class="btn btn-primary" id="next-link" href="vishing-2.html" disabled>Next scenario</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div data-include="footer"></div>
+
+  <script type="module" src="js/main.js"></script>
+  <script src="js/vishing.js"></script>
+  <script>window.SC_FILE = "data/vishing-1.json";</script>
+</body>
+</html>

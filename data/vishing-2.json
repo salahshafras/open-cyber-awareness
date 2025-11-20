@@ -1,0 +1,92 @@
+{
+  "id": "vishing2",
+  "title": "Bank Fraud Department Call",
+  "left": {
+    "callerName": "First National Bank",
+    "callerNumber": "+1 (555) 0200",
+    "avatar": "🏦",
+    "transcript": [
+      {
+        "speaker": "Caller",
+        "text": "Good afternoon, this is Sarah from First National Bank's fraud prevention team."
+      },
+      {
+        "speaker": "You",
+        "text": "Hi Sarah, is everything okay with my account?"
+      },
+      {
+        "speaker": "Caller",
+        "text": "We noticed an unusual transaction and wanted to verify it with you. Did you make a purchase at Best Buy for $1,247.99?"
+      },
+      {
+        "speaker": "You",
+        "text": "No, I didn't make that purchase."
+      },
+      {
+        "speaker": "Caller",
+        "text": "Thank you for confirming. I'll block that transaction immediately. You'll receive a confirmation email and a new card within 5-7 business days. Is there anything else I can help you with?"
+      },
+      {
+        "speaker": "You",
+        "text": "No, that's all. Thank you for catching that."
+      },
+      {
+        "speaker": "Caller",
+        "text": "You're welcome. Have a great day, and remember you can always check your account activity through our mobile app or online banking."
+      }
+    ]
+  },
+  "right": {
+    "callerName": "Bank Security Alert",
+    "callerNumber": "+1 (888) 456-7890",
+    "avatar": "⚠️",
+    "transcript": [
+      {
+        "speaker": "Caller",
+        "text": "FRAUD ALERT! This is your bank's security department. Your account has been breached!",
+        "suspicious": true,
+        "key": "panic-opening"
+      },
+      {
+        "speaker": "You",
+        "text": "Oh no! What should I do?"
+      },
+      {
+        "speaker": "Caller",
+        "text": "I need to verify your identity immediately. Please provide your full card number, expiration date, and the CVV code on the back.",
+        "suspicious": true,
+        "key": "card-details"
+      },
+      {
+        "speaker": "You",
+        "text": "All of that? Isn't that sensitive information?"
+      },
+      {
+        "speaker": "Caller",
+        "text": "Yes, but we need it RIGHT NOW to stop the fraudulent charges! Also, what's your online banking password? We need to lock the account!",
+        "suspicious": true,
+        "key": "password-demand"
+      },
+      {
+        "speaker": "You",
+        "text": "This doesn't feel right..."
+      },
+      {
+        "speaker": "Caller",
+        "text": "If you don't act now, you'll lose all your money! Don't hang up or we can't help you!",
+        "suspicious": true,
+        "key": "threat"
+      }
+    ]
+  },
+  "answer": "B",
+  "differences": ["panic-opening", "card-details", "password-demand", "threat"],
+  "explainTitle": "Excellent! You identified the vishing scam.",
+  "explainPoints": [
+    "<b>Fear-based manipulation:</b> The scammer opens with 'FRAUD ALERT!' and 'breached' to create immediate panic. Real banks remain calm and explain the situation clearly.",
+    "<b>Requesting full card details:</b> Legitimate banks <b>NEVER</b> ask for your full card number, CVV, or PIN over the phone. They already have this information on file.",
+    "<b>Demanding passwords:</b> Banks will never ask for your online banking password or any other authentication credentials during a phone call.",
+    "<b>Using threats and pressure:</b> 'You'll lose all your money!' and 'Don't hang up!' are classic scare tactics. Real banks allow you time to think and offer to call back.",
+    "<b>Generic caller ID:</b> The number appears as 'Bank Security Alert' which can be spoofed. Always hang up and call your bank using the official number on your card or statement."
+  ]
+}

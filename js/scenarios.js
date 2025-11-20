@@ -9,6 +9,8 @@ const scenarios = [
   { id:"sms1", title:"Package delivery",     hint:"SMS phishing",     thumb:"g6",  href:"sms-1.html",  required:true },
   { id:"sms2", title:"Bank alert",           hint:"SMS phishing",     thumb:"g7",  href:"sms-2.html",  required:true },
   { id:"sms3", title:"Account verification", hint:"SMS phishing",     thumb:"g8",  href:"sms-3.html",  required:true },
+  { id:"vishing1", title:"IT support alert", hint:"Voice phishing",   thumb:"g1",  href:"vishing-1.html",  required:true },
+  { id:"vishing2", title:"Bank fraud call",  hint:"Voice phishing",   thumb:"g2",  href:"vishing-2.html",  required:true },
 
   // unlocks after all required are done
   { id:"summary", title:"Summary", hint:"Your results", thumb:"g2", href:"how.html", required:false, summary:true }
