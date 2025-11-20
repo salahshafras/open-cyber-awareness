@@ -10,6 +10,47 @@
 <body class="scenario sms">
   <div data-include="header"></div>
 
+  <!-- SMS Smishing Education Popup -->
+  <div id="sms-popup-overlay" class="popup-overlay" style="display: none;">
+    <div class="popup-modal">
+      <div class="popup-header">
+        <h2>📱 What is SMS Smishing?</h2>
+      </div>
+      <div class="popup-content">
+        <p><strong>Smishing</strong> (SMS + Phishing) is when criminals send fraudulent text messages to trick you into revealing personal information, clicking malicious links, or sending money.</p>
+        
+        <div class="popup-example">
+          <h3>🏢 Example: NexaTrust.com</h3>
+          <p>Imagine you work at <strong>NexaTrust.com</strong>. A smishing message might:</p>
+          <ul>
+            <li>Claim to be from "NexaTrust Security" but come from an unknown number</li>
+            <li>Create panic: "Your account will be suspended in 1 hour!"</li>
+            <li>Include a suspicious link like nexatrust-secure.com or nexatrust.verify-now.com</li>
+            <li>Ask you to "confirm your identity" or "verify payment information"</li>
+            <li>Request you to reply with sensitive codes or passwords</li>
+          </ul>
+        </div>
+
+        <div class="popup-tips">
+          <h3>🛡️ How to Spot SMS Smishing:</h3>
+          <ul>
+            <li><strong>Check the sender number</strong> - legitimate companies use verified short codes</li>
+            <li><strong>Look for urgency tactics</strong> - "Act now!" or "Last chance!"</li>
+            <li><strong>Inspect links carefully</strong> - hover or long-press to see the real URL</li>
+            <li><strong>Watch for spelling errors</strong> in company names or messages</li>
+            <li><strong>Never click links in unsolicited texts</strong> - go directly to the official app or website</li>
+            <li><strong>Don't reply to suspicious messages</strong> - this confirms your number is active</li>
+          </ul>
+        </div>
+
+        <p class="popup-reminder">In the following scenarios, you'll practice identifying these SMS red flags!</p>
+      </div>
+      <div class="popup-footer">
+        <button id="close-sms-popup-btn" class="btn btn-primary btn-large">Got it! Let's start →</button>
+      </div>
+    </div>
+  </div>
+
   <main class="wrap scenario-flow">
     <!-- STEP 1 -->
     <section class="step" id="step-1">

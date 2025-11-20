@@ -15,6 +15,38 @@ const ex_title = document.getElementById("ex-title");
 const ex_list  = document.getElementById("ex-list");
 const next     = document.getElementById("next-link");
 
+// Email Phishing Education Popup - Show once per session
+(function() {
+  const popupOverlay = document.getElementById("email-popup-overlay");
+  const closeBtn = document.getElementById("close-popup-btn");
+  
+  if (popupOverlay && closeBtn) {
+    // Check if user has seen the popup this session
+    const hasSeenPopup = sessionStorage.getItem("emailPopupSeen");
+    
+    if (!hasSeenPopup) {
+      // Show popup after a brief delay
+      setTimeout(() => {
+        popupOverlay.style.display = "flex";
+      }, 500);
+      
+      // Close button handler
+      closeBtn.addEventListener("click", () => {
+        popupOverlay.style.display = "none";
+        sessionStorage.setItem("emailPopupSeen", "true");
+      });
+      
+      // Close on overlay click (optional)
+      popupOverlay.addEventListener("click", (e) => {
+        if (e.target === popupOverlay) {
+          popupOverlay.style.display = "none";
+          sessionStorage.setItem("emailPopupSeen", "true");
+        }
+      });
+    }
+  }
+})();
+
 document.addEventListener("DOMContentLoaded", async () => {
   const d = await fetch(window.SC_FILE).then(r => r.json());
 
