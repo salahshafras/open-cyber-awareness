@@ -1,19 +1,19 @@
 /* Scenario hub - session-based progress tracking */
 
 const scenarios = [
-  { id:"e1",  title:"Password change",       hint:"Email phishing",   thumb:"g1",  href:"email-1.html",  required:true },
-  { id:"e2",  title:"Invoice attachment",    hint:"Email phishing",   thumb:"g2",  href:"email-2.html",  required:true },
-  { id:"e3",  title:"Delivery notice",       hint:"Email phishing",   thumb:"g3",  href:"email-3.html",  required:true },
-  { id:"e4",  title:"Health benefits",       hint:"Email phishing",   thumb:"g4",  href:"email-4.html",  required:true },
-  { id:"e5",  title:"Travel booking",        hint:"Email phishing",   thumb:"g5",  href:"email-5.html",  required:true },
-  { id:"sms1", title:"Package delivery",     hint:"SMS phishing",     thumb:"g6",  href:"sms-1.html",  required:true },
-  { id:"sms2", title:"Bank alert",           hint:"SMS phishing",     thumb:"g7",  href:"sms-2.html",  required:true },
-  { id:"sms3", title:"Account verification", hint:"SMS phishing",     thumb:"g8",  href:"sms-3.html",  required:true },
-  { id:"vishing1", title:"IT support alert", hint:"Voice phishing",   thumb:"g1",  href:"vishing-1.html",  required:true },
-  { id:"vishing2", title:"Bank fraud call",  hint:"Voice phishing",   thumb:"g2",  href:"vishing-2.html",  required:true },
+  { id:"e1",  title:"Password change",       hint:"Email phishing",   thumb:"g1",  icon:"password change.jpeg",  href:"email-1.html",  required:true },
+  { id:"e2",  title:"Invoice attachment",    hint:"Email phishing",   thumb:"g2",  icon:"Invoice attachment.jpeg",  href:"email-2.html",  required:true },
+  { id:"e3",  title:"Delivery notice",       hint:"Email phishing",   thumb:"g3",  icon:"delivery notice.jpeg",  href:"email-3.html",  required:true },
+  { id:"e4",  title:"Health benefits",       hint:"Email phishing",   thumb:"g4",  icon:"health benefits.jpeg",  href:"email-4.html",  required:true },
+  { id:"e5",  title:"Travel booking",        hint:"Email phishing",   thumb:"g5",  icon:"Travel booking.jpeg",  href:"email-5.html",  required:true },
+  { id:"sms1", title:"Package delivery",     hint:"SMS phishing",     thumb:"g6",  icon:"package delivery .jpg",  href:"sms-1.html",  required:true },
+  { id:"sms2", title:"Bank alert",           hint:"SMS phishing",     thumb:"g7",  icon:"bank alert .jpeg",  href:"sms-2.html",  required:true },
+  { id:"sms3", title:"Account verification", hint:"SMS phishing",     thumb:"g8",  icon:"account verification.png",  href:"sms-3.html",  required:true },
+  { id:"vishing1", title:"IT support alert", hint:"Voice phishing",   thumb:"g1",  icon:"it support alert.jpeg",  href:"vishing-1.html",  required:true },
+  { id:"vishing2", title:"Bank fraud call",  hint:"Voice phishing",   thumb:"g2",  icon:"bank fraud call.jpg",  href:"vishing-2.html",  required:true },
 
   // unlocks after all required are done
-  { id:"summary", title:"Summary", hint:"Your results", thumb:"g2", href:"how.html", required:false, summary:true }
+  { id:"summary", title:"Summary", hint:"Your results", thumb:"g2", icon:"suammry.jpeg", href:"summary.html", required:false, summary:true }
 ];
 
 const doneKey = id => `scenario:${id}:done`;
@@ -49,7 +49,7 @@ function render(){
     card.setAttribute("aria-label", s.title + (locked ? " (locked)" : ""));
 
     card.innerHTML = `
-      <div class="thumb ${s.thumb}"></div>
+      <div class="thumb ${s.thumb}" ${s.icon ? `style="background-image: url('assets/icons/${s.icon}'); background-size: cover; background-position: center; background-repeat: no-repeat;"` : ""}></div>
       <div class="body">
         <h2 class="title">${s.title}</h2>
         <div class="meta">
