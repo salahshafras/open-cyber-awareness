@@ -1,0 +1,25 @@
+{
+  "id": "e1",
+  "title": "Password change reminder",
+  "brand": "NexaTrust",
+  "left": {
+    "from": "NexaTrust IT <passwordnotice@nexatrust.com>",
+    "to": "jonah.stokes@nexatrust.com",
+    "subject": "Change your password now",
+    "bodyHtml": "<p>Dear Jonah,</p><p>If you don't change your password, it will expire in 14 days and you may lose access to key apps.</p><h4>How do I change my password?</h4><p>Go to the <a class='safe' href='#'>HR portal</a> from the intranet.</p>"
+  },
+  "right": {
+    "from": "NexaTrust IT <passwordnotice@nexatrvst.com>",
+    "to": "jonah.stokes@gmail.com",
+    "subject": "Change your password now",
+    "bodyHtml": "<p>Dear Jonah,</p><p>If you don't change your password, it will expire in 14 days and you may lose access to key apps.</p><h4>How do I change my password?</h4><p>Change your password now by <a class='click-here' href='#'>clicking here and entering your credentials</a>.</p>"
+  },
+  "answer": "B",
+  "differences": ["from", "to", "link"],
+  "explainTitle": "That's right!",
+  "explainPoints": [
+    "Look-alike domain: <b>nexatrvst.com</b> swaps the letter \"u\" for \"v\". Attackers use tiny changes like this to trick people into trusting the sender.",
+    "Wrong mailbox: it was sent to a <b>personal</b> address (gmail), not your <b>@nexatrust.com</b> work address. Password and account notices should stay within company email.",
+    "Unsafe path: it asks you to <b>\"click here\"</b> and enter credentials. Real NexaTrust guidance tells you to open the known HR/IT portal from the intranet or bookmarks—no login links in email."
+  ]
+}

@@ -1,0 +1,594 @@
+/* ===== Voice Phishing (Vishing) Scenario Styles ===== */
+
+body.scenario.vishing {
+  background: #f6f7fb;
+  color: #0f172a;
+}
+
+body.scenario .wrap {
+  max-width: 1100px;
+  margin: 20px auto;
+  padding: 0 16px;
+}
+
+.wrap.scenario-flow {
+  flex: 1 0 auto;
+}
+
+/* Step styling with background */
+.step {
+  margin: 28px 0;
+  padding: 20px;
+  background: #fff;
+  border: 1px solid #e7eaf3;
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(15,23,42,.06);
+}
+
+.step h2 {
+  margin-top: 0;
+  font-size: 1.8rem;
+  color: #1e293b;
+}
+
+.muted {
+  color: #5e6b85;
+}
+
+.center {
+  text-align: center;
+}
+
+/* Phone call comparison layout */
+.compare {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  margin: 24px 0;
+}
+
+.call-card {
+  position: relative;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 18px;
+  padding: 24px;
+  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+}
+
+/* Label A/B */
+.label-ab {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 36px;
+  height: 36px;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  font-size: 18px;
+  color: #fff;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+}
+
+/* Phone call interface */
+.phone-call {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 14px;
+  padding: 24px;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.caller-avatar {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 16px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 36px;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.caller-name {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0 0 4px;
+}
+
+.caller-number {
+  font-size: 14px;
+  color: #64748b;
+  margin: 0 0 20px;
+  font-family: 'Courier New', monospace;
+}
+
+.call-status {
+  font-size: 13px;
+  color: #10b981;
+  font-weight: 600;
+  margin: 0 0 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Transcript area */
+.call-transcript {
+  text-align: left;
+  margin-top: 20px;
+  padding: 16px;
+  background: #f8fafc;
+  border-radius: 10px;
+  border: 1px solid #e2e8f0;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.transcript-line {
+  margin: 12px 0;
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  line-height: 1.6;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.transcript-line:hover {
+  background: #e2e8f0;
+}
+
+.transcript-line.clickable-area {
+  position: relative;
+}
+
+.transcript-line.clickable-area:hover {
+  background: #fef3c7;
+  border-left: 3px solid #f59e0b;
+}
+
+.transcript-line.found {
+  background: #dcfce7 !important;
+  border-left: 3px solid #10b981;
+}
+
+.transcript-line .speaker {
+  font-weight: 700;
+  color: #1e293b;
+  margin-right: 8px;
+}
+
+.transcript-line.caller .speaker {
+  color: #dc2626;
+}
+
+.transcript-line.you .speaker {
+  color: #2563eb;
+}
+
+/* Found meter */
+.found-meter {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 20px 0;
+  padding: 12px;
+  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+  border-radius: 10px;
+  border: 2px solid #fbbf24;
+}
+
+#found-count {
+  color: #dc2626;
+  font-size: 24px;
+}
+
+/* Pick section */
+.pick {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  max-width: 600px;
+  margin: 24px auto;
+}
+
+.pick-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  border-radius: 14px;
+  padding: 24px 20px;
+  cursor: pointer;
+  transition: all 0.3s;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.pick-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+}
+
+.pick-btn.selected {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  box-shadow: 0 8px 25px rgba(16, 185, 129, 0.4);
+}
+
+.pick-btn .circle {
+  width: 50px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.pick-btn .report {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pick-btn .fish {
+  width: 28px;
+  height: 28px;
+}
+
+.pick-btn .report-text {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* Feedback */
+.pick-feedback {
+  margin-top: 20px;
+  padding: 16px;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* Explanation section */
+.explain {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.ex-points {
+  background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+  padding: 32px;
+  border-radius: 14px;
+  border: 2px solid #10b981;
+}
+
+.ex-points h2 {
+  color: #065f46;
+  margin-top: 0;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.ex-points ol {
+  list-style: none;
+  counter-reset: item;
+  padding: 0;
+  margin: 24px 0;
+}
+
+.ex-points li {
+  counter-increment: item;
+  margin: 16px 0;
+  padding: 16px;
+  background: #fff;
+  border-radius: 10px;
+  border-left: 4px solid #10b981;
+  position: relative;
+  line-height: 1.7;
+  color: #1e293b;
+}
+
+.ex-points li::before {
+  content: counter(item);
+  position: absolute;
+  left: -20px;
+  top: 16px;
+  background: #10b981;
+  color: #fff;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.ex-points li b {
+  color: #dc2626;
+  font-weight: 700;
+}
+
+/* Actions */
+.actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+
+/* Button styles */
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-weight: 600;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.3s;
+  cursor: pointer;
+  border: none;
+  font-size: 16px;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #fff;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+.btn-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.btn.outline {
+  background: transparent;
+  border: 2px solid #667eea;
+  color: #667eea;
+}
+
+.btn.outline:hover {
+  background: #667eea;
+  color: #fff;
+}
+
+/* Wide step for explanation */
+.step.wide {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .compare {
+    grid-template-columns: 1fr;
+  }
+
+  .pick {
+    grid-template-columns: 1fr;
+    max-width: 300px;
+  }
+
+  .call-transcript {
+    max-height: 250px;
+  }
+
+  .ex-points {
+    padding: 20px;
+  }
+
+  .ex-points li::before {
+    position: static;
+    display: inline-block;
+    margin-right: 12px;
+    vertical-align: middle;
+  }
+
+  .actions {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
+
+/* Call indicator animation */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.call-status::before {
+  content: "📞 ";
+  animation: pulse 2s ease-in-out infinite;
+}
+
+/* Voice Phishing Education Popup */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(4px);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.popup-modal {
+  background: #fff;
+  border-radius: 18px;
+  max-width: 650px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  animation: slideUp 0.4s ease-out;
+}
+
+@keyframes slideUp {
+  from { 
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to { 
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.popup-header {
+  background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+  color: #fff;
+  padding: 24px 28px;
+  border-radius: 18px 18px 0 0;
+}
+
+.popup-header h2 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.popup-content {
+  padding: 28px;
+  color: #1e293b;
+  line-height: 1.7;
+}
+
+.popup-content p {
+  margin: 0 0 20px 0;
+  font-size: 16px;
+}
+
+.popup-example {
+  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+  border-left: 4px solid #f59e0b;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px 0;
+}
+
+.popup-example h3 {
+  margin: 0 0 12px 0;
+  color: #92400e;
+  font-size: 20px;
+}
+
+.popup-example p {
+  margin: 0 0 12px 0;
+  color: #78350f;
+}
+
+.popup-example ul {
+  margin: 8px 0 0 0;
+  padding-left: 24px;
+  color: #78350f;
+}
+
+.popup-example li {
+  margin: 8px 0;
+}
+
+.popup-tips {
+  background: linear-gradient(135deg, #ede9fe 0%, #ddd6fe 100%);
+  border-left: 4px solid #8b5cf6;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px 0;
+}
+
+.popup-tips h3 {
+  margin: 0 0 12px 0;
+  color: #6b21a8;
+  font-size: 20px;
+}
+
+.popup-tips ul {
+  margin: 8px 0 0 0;
+  padding-left: 24px;
+  color: #6b21a8;
+}
+
+.popup-tips li {
+  margin: 10px 0;
+}
+
+.popup-tips strong {
+  color: #581c87;
+}
+
+.popup-reminder {
+  margin: 20px 0 0 0 !important;
+  padding: 16px;
+  background: #f0fdf4;
+  border-radius: 8px;
+  border: 2px solid #10b981;
+  color: #065f46;
+  font-weight: 600;
+  text-align: center;
+}
+
+.popup-footer {
+  padding: 20px 28px 28px;
+  text-align: center;
+}
+
+.popup-footer .btn {
+  min-width: 200px;
+  font-size: 16px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .popup-modal {
+    max-width: 95%;
+  }
+  
+  .popup-header h2 {
+    font-size: 22px;
+  }
+  
+  .popup-content {
+    padding: 20px;
+  }
+  
+  .popup-example, .popup-tips {
+    padding: 16px;
+  }
+}

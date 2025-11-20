@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SMS 3 – IT Security</title>
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/sms.css" />
+</head>
+<body class="scenario sms">
+  <div data-include="header"></div>
+
+  <!-- SMS Smishing Education Popup -->
+  <div id="sms-popup-overlay" class="popup-overlay" style="display: none;">
+    <div class="popup-modal">
+      <div class="popup-header">
+        <h2>📱 What is SMS Smishing?</h2>
+      </div>
+      <div class="popup-content">
+        <p><strong>Smishing</strong> (SMS + Phishing) is when criminals send fraudulent text messages to trick you into revealing personal information, clicking malicious links, or sending money.</p>
+        
+        <div class="popup-example">
+          <h3>🏢 Example: NexaTrust.com</h3>
+          <p>Imagine you work at <strong>NexaTrust.com</strong>. A smishing message might:</p>
+          <ul>
+            <li>Claim to be from "NexaTrust Security" but come from an unknown number</li>
+            <li>Create panic: "Your account will be suspended in 1 hour!"</li>
+            <li>Include a suspicious link like nexatrust-secure.com or nexatrust.verify-now.com</li>
+            <li>Ask you to "confirm your identity" or "verify payment information"</li>
+            <li>Request you to reply with sensitive codes or passwords</li>
+          </ul>
+        </div>
+
+        <div class="popup-tips">
+          <h3>🛡️ How to Spot SMS Smishing:</h3>
+          <ul>
+            <li><strong>Check the sender number</strong> - legitimate companies use verified short codes</li>
+            <li><strong>Look for urgency tactics</strong> - "Act now!" or "Last chance!"</li>
+            <li><strong>Inspect links carefully</strong> - hover or long-press to see the real URL</li>
+            <li><strong>Watch for spelling errors</strong> in company names or messages</li>
+            <li><strong>Never click links in unsolicited texts</strong> - go directly to the official app or website</li>
+            <li><strong>Don't reply to suspicious messages</strong> - this confirms your number is active</li>
+          </ul>
+        </div>
+
+        <p class="popup-reminder">In the following scenarios, you'll practice identifying these SMS red flags!</p>
+      </div>
+      <div class="popup-footer">
+        <button id="close-sms-popup-btn" class="btn btn-primary btn-large">Got it! Let's start →</button>
+      </div>
+    </div>
+  </div>
+
+  <main class="wrap scenario-flow">
+    <!-- STEP 1 -->
+    <section class="step" id="step-1">
+      <h2 id="sc-title">SMS Scenario</h2>
+      <p class="muted" id="sc-intro">Select the <b>THREE</b> differences between the two text messages.</p>
+
+      <div class="compare">
+        <div class="sms-card">
+          <div class="label-ab">A</div>
+          <div id="phone-a"></div>
+        </div>
+
+        <div class="sms-card">
+          <div class="label-ab">B</div>
+          <div id="phone-b"></div>
+        </div>
+      </div>
+
+      <p class="found-meter">Found: <span id="found-count">0</span>/3 differences</p>
+    </section>
+
+    <!-- STEP 2 -->
+    <section class="step wide" id="step-2" aria-disabled="true" hidden>
+      <h2 class="center">Well done</h2>
+      <p class="center muted">You spotted the differences. Which one is the phishing message?</p>
+
+      <div class="pick">
+        <button class="pick-btn" data-choice="A">
+          <span class="circle">A</span>
+          <span class="report">
+            <span class="report-text">Report it now!</span>
+          </span>
+        </button>
+        <button class="pick-btn" data-choice="B">
+          <span class="circle">B</span>
+          <span class="report">
+            <span class="report-text">Report it now!</span>
+          </span>
+        </button>
+      </div>
+
+      <div id="pick-feedback" class="pick-feedback center" aria-live="polite"></div>
+    </section>
+
+    <!-- STEP 3 -->
+    <section class="step wide" id="step-3" hidden>
+      <div class="explain">
+        <div class="ex-points">
+          <h2 id="ex-title">That's right!</h2>
+          <ol id="ex-list"></ol>
+          <div class="actions">
+            <a class="btn outline" href="scenarios.html">← Return to menu</a>
+            <a class="btn btn-primary" id="next-link" href="scenarios.html" disabled>Complete training</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div data-include="footer"></div>
+
+  <script type="module" src="js/main.js"></script>
+  <script src="js/sms.js"></script>
+  <script>window.SC_FILE = "data/sms-3.json";</script>
+</body>
+</html>

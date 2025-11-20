@@ -1,5 +1,5 @@
 {
-  "id": "s3",
+  "id": "e3",
   "title": "Delivery notice — verify address",
   "brand": "NexaTrust",
   "left": {
@@ -21,6 +21,6 @@
     "Look-alike sender: <b>delivry-nexatrust.com</b> imitates the brand.",
     "Personal email target instead of your corporate address.",
     "Requests payment via a link. Legit deliveries are handled by the Logistics portal or official courier apps.",
-    "Classic ‘held package’ lure designed to capture card details."
+    "Classic 'held package' lure designed to capture card details."
   ]
 }

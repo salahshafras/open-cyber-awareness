@@ -1,0 +1,469 @@
+/* Summary Page Styles */
+
+body {
+  background: linear-gradient(120deg, #11183a, #0b1020, #07122a);
+}
+
+.summary-page {
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+.summary-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Congratulations Section */
+.congrats-section {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 24px;
+  margin-bottom: 40px;
+  box-shadow: 0 20px 60px rgba(102, 126, 234, 0.4);
+  position: relative;
+  overflow: hidden;
+}
+
+.congrats-section::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+  animation: rotate 20s linear infinite;
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.trophy-icon {
+  font-size: 80px;
+  margin-bottom: 20px;
+  animation: bounce 2s ease-in-out infinite;
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+.congrats-title {
+  font-size: clamp(32px, 5vw, 56px);
+  font-weight: 800;
+  color: #fff;
+  margin: 0 0 16px 0;
+  position: relative;
+  z-index: 1;
+}
+
+.congrats-title span {
+  color: #fbbf24;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.congrats-subtitle {
+  font-size: clamp(18px, 2.5vw, 24px);
+  color: rgba(255,255,255,0.95);
+  margin: 0;
+  position: relative;
+  z-index: 1;
+}
+
+/* Statistics Grid */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+  margin-bottom: 50px;
+}
+
+.stat-card {
+  background: #fff;
+  border-radius: 18px;
+  padding: 32px 24px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.stat-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+.stat-card.highlight {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: #fff;
+}
+
+.stat-icon {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+.stat-number {
+  font-size: 56px;
+  font-weight: 800;
+  margin-bottom: 8px;
+  color: #1e293b;
+}
+
+.stat-card.highlight .stat-number {
+  color: #fff;
+}
+
+.stat-label {
+  font-size: 16px;
+  font-weight: 600;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.stat-card.highlight .stat-label {
+  color: rgba(255,255,255,0.9);
+}
+
+/* Learnings Section */
+.learnings-section {
+  background: #fff;
+  border-radius: 18px;
+  padding: 40px;
+  margin-bottom: 40px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.section-title {
+  font-size: 32px;
+  font-weight: 800;
+  color: #1e293b;
+  margin: 0 0 32px 0;
+  text-align: center;
+}
+
+.learning-category {
+  margin-bottom: 36px;
+}
+
+.learning-category:last-child {
+  margin-bottom: 0;
+}
+
+.learning-category h3 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0 0 16px 0;
+  padding-bottom: 12px;
+  border-bottom: 3px solid #e2e8f0;
+}
+
+.learning-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.learning-list li {
+  padding: 12px 0 12px 36px;
+  position: relative;
+  color: #475569;
+  line-height: 1.7;
+  font-size: 16px;
+}
+
+.learning-list li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  top: 12px;
+  width: 24px;
+  height: 24px;
+  background: #10b981;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.learning-list li strong {
+  color: #1e293b;
+  font-weight: 700;
+}
+
+/* Best Practices Section */
+.best-practices-section {
+  background: #fff;
+  border-radius: 18px;
+  padding: 40px;
+  margin-bottom: 40px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.practices-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-top: 32px;
+}
+
+.practice-card {
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  border-radius: 14px;
+  padding: 24px;
+  border-left: 4px solid #667eea;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.practice-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(102, 126, 234, 0.15);
+}
+
+.practice-icon {
+  font-size: 40px;
+  margin-bottom: 12px;
+}
+
+.practice-card h4 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0 0 12px 0;
+}
+
+.practice-card p {
+  font-size: 14px;
+  color: #64748b;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Company Reminder */
+.company-reminder {
+  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+  border-radius: 18px;
+  padding: 40px;
+  margin-bottom: 40px;
+  border: 2px solid #f59e0b;
+  box-shadow: 0 10px 30px rgba(245, 158, 11, 0.2);
+}
+
+.reminder-content h3 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #92400e;
+  margin: 0 0 16px 0;
+}
+
+.reminder-content p {
+  font-size: 16px;
+  color: #78350f;
+  margin: 0 0 16px 0;
+  line-height: 1.7;
+}
+
+.reminder-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.reminder-content li {
+  padding: 8px 0 8px 32px;
+  position: relative;
+  color: #78350f;
+  font-size: 15px;
+}
+
+.reminder-content li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: #f59e0b;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+/* CTA Section */
+.cta-section {
+  background: #fff;
+  border-radius: 18px;
+  padding: 50px 40px;
+  text-align: center;
+  margin-bottom: 40px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.cta-section h2 {
+  font-size: 32px;
+  font-weight: 800;
+  color: #1e293b;
+  margin: 0 0 16px 0;
+}
+
+.cta-text {
+  font-size: 18px;
+  color: #64748b;
+  margin: 0 0 32px 0;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Certificate Section */
+.certificate-section {
+  margin-bottom: 40px;
+}
+
+.certificate-card {
+  background: #fff;
+  border-radius: 18px;
+  padding: 50px 40px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  border: 8px solid #667eea;
+  position: relative;
+  overflow: hidden;
+}
+
+.certificate-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 8px;
+  background: linear-gradient(90deg, #667eea, #764ba2, #667eea);
+}
+
+.certificate-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.cert-badge {
+  font-size: 64px;
+  margin-bottom: 16px;
+}
+
+.certificate-header h2 {
+  font-size: 36px;
+  font-weight: 800;
+  color: #1e293b;
+  margin: 0;
+}
+
+.certificate-body {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.cert-text {
+  font-size: 18px;
+  color: #64748b;
+  margin: 8px 0;
+}
+
+.cert-name {
+  font-size: 42px;
+  font-weight: 800;
+  color: #667eea;
+  margin: 16px 0;
+  font-style: italic;
+}
+
+.cert-course {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 16px 0;
+}
+
+.cert-details {
+  font-size: 16px;
+  color: #64748b;
+  margin: 8px 0;
+  font-weight: 600;
+}
+
+.cert-date {
+  font-size: 14px;
+  color: #94a3b8;
+  margin: 16px 0 0 0;
+  font-style: italic;
+}
+
+.certificate-footer {
+  text-align: center;
+}
+
+/* Print styles */
+@media print {
+  body {
+    background: #fff !important;
+  }
+  
+  .app-header, .app-footer, .cta-section {
+    display: none !important;
+  }
+  
+  .certificate-card {
+    page-break-inside: avoid;
+    margin: 0;
+    padding: 40px;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .summary-page {
+    padding: 20px 16px;
+  }
+  
+  .congrats-section {
+    padding: 40px 20px;
+  }
+  
+  .learnings-section, .best-practices-section, .company-reminder, .cta-section, .certificate-card {
+    padding: 24px;
+  }
+  
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .practices-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .cta-buttons {
+    flex-direction: column;
+  }
+  
+  .cta-buttons .btn {
+    width: 100%;
+  }
+  
+  .cert-name {
+    font-size: 32px;
+  }
+  
+  .cert-course {
+    font-size: 22px;
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "id": "e5",
+  "title": "Security alert — unusual activity",
+  "brand": "NexaTrust",
+  "left": {
+    "from": "IT Security <security@nexatrust.com>",
+    "to": "alex.chen@nexatrust.com",
+    "subject": "Suspicious login attempt detected",
+    "bodyHtml": "<p>Hi Alex,</p><p>We noticed a login from an unfamiliar device.</p><h4>What should I do?</h4><p>Review your recent sessions in the <a class='safe' href='#'>Security Center</a> on the intranet.</p>"
+  },
+  "right": {
+    "from": "Security Alert <alert@nexatrust-security.com>",
+    "to": "alex.chen@outlook.com",
+    "subject": "Account locked — verify identity now",
+    "bodyHtml": "<p>Your account has been temporarily locked. <a class='click-here' href='#'>Verify your identity</a> to unlock.</p><p>Security</p>"
+  },
+  "answer": "B",
+  "differences": ["from", "to", "link"],
+  "explainTitle": "Well spotted.",
+  "explainPoints": [
+    "Suspicious domain: <b>nexatrust-security.com</b> is not the official domain.",
+    "Sent to personal email (<b>outlook.com</b>) instead of work address.",
+    "Demands immediate action via link. Real security alerts direct you to the Security Center.",
+    "Creates panic ('account locked') to bypass your judgment."
+  ]
+}

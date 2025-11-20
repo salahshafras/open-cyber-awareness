@@ -1,0 +1,73 @@
+{
+  "id": "vishing1",
+  "title": "IT Support Security Alert",
+  "left": {
+    "callerName": "IT Department",
+    "callerNumber": "+1 (555) 0100",
+    "avatar": "💼",
+    "transcript": [
+      {
+        "speaker": "Caller",
+        "text": "Hi, this is Marcus from IT Support. How are you today?"
+      },
+      {
+        "speaker": "You",
+        "text": "I'm good, thanks. What can I help you with?"
+      },
+      {
+        "speaker": "Caller",
+        "text": "We're doing routine security updates on all company accounts. I need to verify your employee ID for our records."
+      },
+      {
+        "speaker": "You",
+        "text": "Sure, it's on my badge. Let me check the HR portal first."
+      },
+      {
+        "speaker": "Caller",
+        "text": "No problem. You can also submit a ticket through the IT portal if you prefer, and we'll follow up via email."
+      }
+    ]
+  },
+  "right": {
+    "callerName": "IT Security Team",
+    "callerNumber": "+1 (844) 729-8844",
+    "avatar": "🔒",
+    "transcript": [
+      {
+        "speaker": "Caller",
+        "text": "URGENT! This is IT Security. Your account has been compromised!",
+        "suspicious": true,
+        "key": "opening"
+      },
+      {
+        "speaker": "You",
+        "text": "What? Really? What happened?"
+      },
+      {
+        "speaker": "Caller",
+        "text": "We detected suspicious login attempts. I need your password immediately to secure your account before it's locked!",
+        "suspicious": true,
+        "key": "password-request"
+      },
+      {
+        "speaker": "You",
+        "text": "My password? Are you sure that's the right procedure?"
+      },
+      {
+        "speaker": "Caller",
+        "text": "Yes! We don't have time. Also, what's the code from your authenticator app? We need it NOW!",
+        "suspicious": true,
+        "key": "urgency"
+      }
+    ]
+  },
+  "answer": "B",
+  "differences": ["opening", "password-request", "urgency"],
+  "explainTitle": "Correct! You spotted the vishing attempt.",
+  "explainPoints": [
+    "<b>Aggressive urgency and panic:</b> The scammer uses 'URGENT!' and 'NOW!' to pressure you into acting without thinking. Legitimate IT staff remain calm and professional.",
+    "<b>Requesting passwords directly:</b> Real IT departments <b>NEVER</b> ask for your password, PIN, or MFA codes over the phone. They can reset accounts without this information.",
+    "<b>Suspicious phone number:</b> The number +1 (844) 729-8844 is an external toll-free number, not an internal extension. Always verify by calling the official IT helpdesk number.",
+    "<b>No verification offered:</b> Legitimate IT staff will provide their employee ID, offer to send confirmation emails, or suggest you call back through official channels."
+  ]
+}

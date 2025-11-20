@@ -15,6 +15,38 @@ const ex_title = document.getElementById("ex-title");
 const ex_list  = document.getElementById("ex-list");
 const next     = document.getElementById("next-link");
 
+// Email Phishing Education Popup - Show once per session
+(function() {
+  const popupOverlay = document.getElementById("email-popup-overlay");
+  const closeBtn = document.getElementById("close-popup-btn");
+  
+  if (popupOverlay && closeBtn) {
+    // Check if user has seen the popup this session
+    const hasSeenPopup = sessionStorage.getItem("emailPopupSeen");
+    
+    if (!hasSeenPopup) {
+      // Show popup after a brief delay
+      setTimeout(() => {
+        popupOverlay.style.display = "flex";
+      }, 500);
+      
+      // Close button handler
+      closeBtn.addEventListener("click", () => {
+        popupOverlay.style.display = "none";
+        sessionStorage.setItem("emailPopupSeen", "true");
+      });
+      
+      // Close on overlay click (optional)
+      popupOverlay.addEventListener("click", (e) => {
+        if (e.target === popupOverlay) {
+          popupOverlay.style.display = "none";
+          sessionStorage.setItem("emailPopupSeen", "true");
+        }
+      });
+    }
+  }
+})();
+
 document.addEventListener("DOMContentLoaded", async () => {
   const d = await fetch(window.SC_FILE).then(r => r.json());
 
@@ -41,6 +73,22 @@ document.addEventListener("DOMContentLoaded", async () => {
   a_subj.textContent = d.left.subject;
   a_body.innerHTML   = d.left.bodyHtml;
 
+  // Wrap greeting if it's a difference
+  if (d.differences && d.differences.includes("greeting")) {
+    const greetingMatch = a_body.innerHTML.match(/(<p>)(Dear [^<,]+|Hi[^<,]*)(,?<\/p>)/i);
+    if (greetingMatch) {
+      a_body.innerHTML = a_body.innerHTML.replace(
+        greetingMatch[0],
+        `${greetingMatch[1]}${wrap(greetingMatch[2], "greeting")}${greetingMatch[3]}`
+      );
+    }
+  }
+
+  // Wrap subject if it's a difference
+  if (d.differences && d.differences.includes("subject")) {
+    a_subj.innerHTML = wrap(d.left.subject, "subject");
+  }
+
   // Link in left (safe portal)
   const leftLink = a_body.querySelector("a.safe") || a_body.querySelector("a");
   if (leftLink) { leftLink.classList.add("pair","target"); leftLink.dataset.key = "link"; }
@@ -58,6 +106,22 @@ document.addEventListener("DOMContentLoaded", async () => {
   // Subject + body
   b_subj.textContent = d.right.subject;
   b_body.innerHTML   = d.right.bodyHtml;
+
+  // Wrap greeting if it's a difference
+  if (d.differences && d.differences.includes("greeting")) {
+    const greetingMatch = b_body.innerHTML.match(/(<p>)(Dear [^<,]+|Hi[^<,]*)(,?<\/p>)/i);
+    if (greetingMatch) {
+      b_body.innerHTML = b_body.innerHTML.replace(
+        greetingMatch[0],
+        `${greetingMatch[1]}${wrap(greetingMatch[2], "greeting")}${greetingMatch[3]}`
+      );
+    }
+  }
+
+  // Wrap subject if it's a difference
+  if (d.differences && d.differences.includes("subject")) {
+    b_subj.innerHTML = wrap(d.right.subject, "subject");
+  }
 
   // Link in right (click-here)
   const rightLink = b_body.querySelector("a.click-here") || b_body.querySelector("a");

@@ -1,0 +1,37 @@
+{
+  "id": "sms2",
+  "title": "Payroll notification",
+  "brand": "NexaTrust",
+  "left": {
+    "from": "NexaTrust HR",
+    "number": "55512",
+    "messages": [
+      {
+        "text": "Your payroll for period ending 11/15 has been processed. Amount: $3,247.82 deposited to account ending in 4891. View details in Employee Portal > Payroll or contact HR at ext. 3050.",
+        "time": "9:15 AM",
+        "type": "received"
+      }
+    ]
+  },
+  "right": {
+    "from": "NexaTrust Payroll",
+    "number": "+1-866-PAY-NOW",
+    "messages": [
+      {
+        "text": "⚠️ ALERT: Suspicious activity on your payroll account! Your last deposit is on HOLD pending verification. Click here immediately to confirm identity or funds will be returned: https://nexatrust-verify.com/urgent/login?emp=5829",
+        "time": "2:18 PM",
+        "type": "received",
+        "hasLink": true
+      }
+    ]
+  },
+  "answer": "B",
+  "differences": ["from", "number", "message-1"],
+  "explainTitle": "Well done!",
+  "explainPoints": [
+    "Different sender name: <b>'NexaTrust Payroll'</b> vs the legitimate 'NexaTrust HR'.",
+    "Suspicious number format: <b>'+1-866-PAY-NOW'</b> is unusual. Real company texts use short codes like '55512'.",
+    "Message content is alarming: The phishing message uses urgent language with symbols (⚠️), threats about funds being 'on HOLD', and demands immediate action. The legitimate message is calm, detailed, and informative.",
+    "Malicious link: <b>nexatrust-verify.com</b> is fake. Real payroll details are only in the Employee Portal."
+  ]
+}
