@@ -1,16 +1,14 @@
 /* Scenario hub - session-based progress tracking */
 
 const scenarios = [
-  { id:"s1",  title:"Time for change",       hint:"HR update",        thumb:"g1",  href:"scenario-1.html",  required:true },
-  { id:"s2",  title:"Please see attached",   hint:"Attachment lure",  thumb:"g2",  href:"scenario-2.html",  required:true },
-  { id:"s3",  title:"Get involved",          hint:"Event invite",     thumb:"g3",  href:"scenario-3.html",  required:true },
-  { id:"s4",  title:"Your health benefits",  hint:"Benefits portal",  thumb:"g4",  href:"scenario-4.html",  required:true },
-  { id:"s5",  title:"Enjoy your stay",       hint:"Travel booking",   thumb:"g5",  href:"scenario-5.html",  required:true },
-  { id:"s6",  title:"Verify your account",   hint:"Login reset",      thumb:"g6",  href:"scenario-6.html",  required:true },
-  { id:"s7",  title:"Delivery notice",       hint:"Missed package",   thumb:"g7",  href:"scenario-7.html",  required:true },
-  { id:"s8",  title:"CEO request",           hint:"Urgent payment",   thumb:"g8",  href:"scenario-8.html",  required:true },
-  { id:"s9",  title:"Bank alert",            hint:"OTP harvest",      thumb:"g9",  href:"scenario-9.html",  required:true },
-  { id:"s10", title:"Update benefits form",  hint:"Doc link",         thumb:"g10", href:"scenario-10.html", required:true },
+  { id:"e1",  title:"Password change",       hint:"Email phishing",   thumb:"g1",  href:"email-1.html",  required:true },
+  { id:"e2",  title:"Invoice attachment",    hint:"Email phishing",   thumb:"g2",  href:"email-2.html",  required:true },
+  { id:"e3",  title:"Delivery notice",       hint:"Email phishing",   thumb:"g3",  href:"email-3.html",  required:true },
+  { id:"e4",  title:"Health benefits",       hint:"Email phishing",   thumb:"g4",  href:"email-4.html",  required:true },
+  { id:"e5",  title:"Travel booking",        hint:"Email phishing",   thumb:"g5",  href:"email-5.html",  required:true },
+  { id:"sms1", title:"Package delivery",     hint:"SMS phishing",     thumb:"g6",  href:"sms-1.html",  required:true },
+  { id:"sms2", title:"Bank alert",           hint:"SMS phishing",     thumb:"g7",  href:"sms-2.html",  required:true },
+  { id:"sms3", title:"Account verification", hint:"SMS phishing",     thumb:"g8",  href:"sms-3.html",  required:true },
 
   // unlocks after all required are done
   { id:"summary", title:"Summary", hint:"Your results", thumb:"g2", href:"how.html", required:false, summary:true }

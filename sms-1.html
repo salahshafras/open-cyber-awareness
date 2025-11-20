@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SMS 1 – Package Delivery</title>
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/sms.css" />
+</head>
+<body class="scenario sms">
+  <div data-include="header"></div>
+
+  <main class="wrap scenario-flow">
+    <!-- STEP 1 -->
+    <section class="step" id="step-1">
+      <h2 id="sc-title">SMS Scenario</h2>
+      <p class="muted" id="sc-intro">Select the <b>THREE</b> differences between the two text messages.</p>
+
+      <div class="compare">
+        <div class="sms-card">
+          <div class="label-ab">A</div>
+          <div id="phone-a"></div>
+        </div>
+
+        <div class="sms-card">
+          <div class="label-ab">B</div>
+          <div id="phone-b"></div>
+        </div>
+      </div>
+
+      <p class="found-meter">Found: <span id="found-count">0</span>/3 differences</p>
+    </section>
+
+    <!-- STEP 2 -->
+    <section class="step wide" id="step-2" aria-disabled="true" hidden>
+      <h2 class="center">Well done</h2>
+      <p class="center muted">You spotted the differences. Which one is the phishing message?</p>
+
+      <div class="pick">
+        <button class="pick-btn" data-choice="A">
+          <span class="circle">A</span>
+          <span class="report">
+            <img src="assets/icons/reportsms.jpg" alt="Phish icon" class="fish">
+            <span class="report-text">Report it now!</span>
+          </span>
+        </button>
+        <button class="pick-btn" data-choice="B">
+          <span class="circle">B</span>
+          <span class="report">
+            <img src="assets/icons/reportsms.jpg" alt="Phish icon" class="fish">
+            <span class="report-text">Report it now!</span>
+          </span>
+        </button>
+      </div>
+
+      <div id="pick-feedback" class="pick-feedback center" aria-live="polite"></div>
+    </section>
+
+    <!-- STEP 3 -->
+    <section class="step wide" id="step-3" hidden>
+      <div class="explain">
+        <div class="ex-points">
+          <h2 id="ex-title">That's right!</h2>
+          <ol id="ex-list"></ol>
+          <div class="actions">
+            <a class="btn outline" href="scenarios.html">← Return to menu</a>
+            <a class="btn btn-primary" id="next-link" href="sms-2.html" disabled>Next scenario</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div data-include="footer"></div>
+
+  <script type="module" src="js/main.js"></script>
+  <script src="js/sms.js"></script>
+  <script>window.SC_FILE = "data/sms-1.json";</script>
+</body>
+</html>

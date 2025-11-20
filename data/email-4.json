@@ -1,0 +1,26 @@
+{
+  "id": "e4",
+  "title": "Benefits enrollment update",
+  "brand": "NexaTrust",
+  "left": {
+    "from": "HR Benefits <benefits@nexatrust.com>",
+    "to": "sam.rivera@nexatrust.com",
+    "subject": "Annual benefits — open enrollment",
+    "bodyHtml": "<p>Hello Sam,</p><p>You have until the end of the month to review your health plan choices.</p><h4>Where do I enroll?</h4><p>Visit the <a class='safe' href='#'>HR portal</a> under Benefits → Enrollment.</p>"
+  },
+  "right": {
+    "from": "Benefits Team <enroll@nexatrust-benefits.com>",
+    "to": "sam.rivera@hotmail.com",
+    "subject": "Benefits expiring — update now",
+    "bodyHtml": "<p>Hi,</p><p>Your coverage will lapse unless you <a class='click-here' href='#'>re-enroll immediately</a>.</p><p>HR</p>"
+  },
+  "answer": "B",
+  "differences": ["from", "to", "link"],
+  "explainTitle": "Nice work.",
+  "explainPoints": [
+    "Fake subdomain: <b>nexatrust-benefits.com</b> is not the real company domain.",
+    "Sent to personal email (<b>hotmail.com</b>) instead of corporate address.",
+    "Uses urgent wording and a link to bypass the official HR portal.",
+    "Real enrollment happens through the HR portal, not email links."
+  ]
+}
